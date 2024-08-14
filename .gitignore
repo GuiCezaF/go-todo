@@ -19,3 +19,6 @@ go.work
 
 # Temp dir
 tmp/
+
+#env file
+.env
