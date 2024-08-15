@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/GuiCezaF/todo-api/internal/handler/routes"
+	"github.com/GuiCezaF/todo-api/internal/routes"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 )

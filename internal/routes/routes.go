@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"github.com/GuiCezaF/todo-api/internal/handler"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -11,14 +12,7 @@ func AddRoutes(app *fiber.App) *fiber.App {
 }
 func toDoRouter(app *fiber.App) *fiber.App {
 
-	type response struct {
-		Message string `json:"message"`
-	}
-
-	app.Get("/", func(c *fiber.Ctx) error {
-		r := response{Message: "Hello World"}
-		return c.JSON(r)
-	})
+	app.Get("/health", handler.HandlerHealthCheck)
 
 	return app
 }
