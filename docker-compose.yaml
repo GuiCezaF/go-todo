@@ -3,7 +3,7 @@ services:
     image: postgres:latest
     restart: unless-stopped
     ports:
-      - ${PORT:-5432}:5432
+      - ${DATABASE_PORT:-5432}:5432
     container_name: go-todo-db
     environment:
       - POSTGRES_USER=${DATABASE_USER}
