@@ -23,7 +23,7 @@ func main() {
 	signal.Notify(c, os.Interrupt)
 	go func() {
 		<-c
-		fmt.Println("Gracefully shutting down...")
+		fmt.Println("\nGracefully shutting down...")
 		app.Shutdown()
 	}()
 	if err := app.Listen(":3000"); err != nil {
